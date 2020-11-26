@@ -7,6 +7,9 @@
     "test": "mocha test.js",
     "benchmark": "node benchmark.js"
   },
+  "files": [
+    "csv.js"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/knrz/CSV.js"
