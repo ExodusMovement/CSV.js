@@ -70,18 +70,6 @@ const CSV = (function() {
     }
   }
 
-  CSV.prototype.deserialize = {
-    string: function(string) {
-      return String(string)
-    },
-    number: function(number) {
-      return Number(number)
-    },
-    boolean: function(b) {
-      return Boolean(b)
-    },
-  }
-
   CSV.prototype.serialize = {
     object: function(object) {
       const that = this
@@ -104,7 +92,7 @@ const CSV = (function() {
       return serialized
     },
     string: function(string) {
-      return '"' + String(string).replace(/"/g, '""') + '"'
+      return string == null ? '' : '"' + String(string).replace(/"/g, '""') + '"'
     },
     null: function(value) {
       return ''
