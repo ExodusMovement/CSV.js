@@ -5,7 +5,8 @@
   "main": "csv.js",
   "scripts": {
     "test": "mocha test.js",
-    "benchmark": "node benchmark.js"
+    "benchmark": "node benchmark.js",
+    "lint": "eslint ."
   },
   "files": [
     "csv.js"
@@ -31,8 +32,20 @@
   },
   "homepage": "https://github.com/knrz/CSV.js",
   "devDependencies": {
+    "babel-eslint": "10.0.1",
     "benchmark": "~1.0.0",
     "deep-equal": "~1.0.0",
-    "mocha": "~1.20.1"
+    "eslint": "5.7.0",
+    "eslint-config-prettier": "3.1.0",
+    "eslint-config-standard": "12.0.0",
+    "eslint-config-standard-jsx": "6.0.2",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-node": "7.0.1",
+    "eslint-plugin-prettier": "3.0.0",
+    "eslint-plugin-promise": "4.0.1",
+    "eslint-plugin-react": "7.11.1",
+    "eslint-plugin-standard": "4.0.0",
+    "mocha": "~1.20.1",
+    "prettier": "1.14.3"
   }
 }
