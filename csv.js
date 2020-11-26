@@ -52,10 +52,6 @@ const CSV = (function() {
     this.options.cellDelimiter = cellDelimiter || ','
   }
 
-  CSV.prototype.set = function(setting, value) {
-    return (this.options[setting] = value)
-  }
-
   function serializeType(object) {
     if (isArray(object)) {
       return 'array'
@@ -195,22 +191,11 @@ const CSV = (function() {
     }
   }
 
-  CSV.prototype.forEach = function(callback) {
-    return this[this.mode](callback)
-  }
-
   return CSV
 })()
 
 CSV.encode = function(data, options) {
   return new CSV(data, options).encode()
-}
-
-CSV.forEach = function(data, options, callback) {
-  if (arguments.length === 2) {
-    callback = options
-  }
-  return new CSV(data, options).forEach(callback)
 }
 
 module.exports = CSV
