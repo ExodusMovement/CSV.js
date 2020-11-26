@@ -58,7 +58,7 @@ describe('CSV', function() {
     it('should encode with cast', function() {
       const options = { cast: ['String', 'Primitive'] }
 
-      const expected = '"123",\r\n"null",456'
+      const expected = '"123",\r\n,456'
 
       const actual = [['123', null], [null, '456']]
       assert.deepStrictEqual(expected, new CSV(actual, options).encode())
